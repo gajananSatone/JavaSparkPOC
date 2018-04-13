@@ -1,6 +1,7 @@
 package gajanans.coreJavaPoc;
 
 public class ValueContainer {
+	@SuppressWarnings("unused")
 	private final String value;
 	public ValueContainer(final String value) {
 		this.value = value;

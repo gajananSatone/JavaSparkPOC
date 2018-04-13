@@ -24,10 +24,12 @@ public class JvmBasics {
 	@Test
 	public void primitiveNullPointer() {
 		final Integer intObject = 42;
+		@SuppressWarnings("unused")
 		Integer a = null;
 
 		assert(intObject == 42);
 		try {
+			@SuppressWarnings("unused")
 			final int newIntValue = methodWhichMayReturnNull(intObject);
 			fail("Assignment of null to primitive should throw NPE");
 		} catch (NullPointerException e) {
@@ -55,7 +57,7 @@ public class JvmBasics {
 		assertTrue(greeting.equals("Good Morning, Dave"));
 	}
 
-	private List authors;
+	private List<Author> authors;
 	private class Author {
 		private final String name;
 		private Author(final String name) { this.name = name; }
@@ -65,18 +67,15 @@ public class JvmBasics {
 
 	@Before
 	public void createAuthors() {
-		authors = new ArrayList();
+		authors = new ArrayList<Author>();
 		authors.add(new Author("Stephen Hawking"));
 		authors.add(new Author("Edgar Allan Poe"));
 		authors.add(new Author("William Shakespeare"));
 	}
 	@Test
 	public void authorListAccess() {
-		final Author author = (Author) authors.get(2);
+		final Author author = authors.get(2);
 		assertEquals("William Shakespeare", author.getName());
-	}
-	private class Field {
-		
 	}
 	
 	private class BookRecord {
@@ -85,19 +84,20 @@ public class JvmBasics {
 			
 		}
 		
-		public String getVal1() {
-			return Val1;
-		}
-		public void setVal1(String val1) {
-			Val1 = val1;
-		}
+//		public String getVal1() {
+//			return Val1;
+//		}
+//		public void setVal1(String val1) {
+//			Val1 = val1;
+//		}
 		public String getAuthor() {
 			return Val2;
 		}
-		public void setVal2(String val2) {
-			Val2 = val2;
-		}
-		String Val1;
+//		public void setVal2(String val2) {
+//			Val2 = val2;
+//		}
+//		String Val1;
+		
 		String Val2;
 		
 	}

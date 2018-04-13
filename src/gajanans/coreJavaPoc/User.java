@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+//import java.util.Collections;
+//import java.util.HashMap;
+//import java.util.LinkedHashMap;
 
 import org.junit.Test;
 
@@ -16,9 +16,14 @@ import static org.junit.Assert.*;
 
 public class User implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String username;
 	
-	private HashMap <String, String> MyHashMap; 
+//	private HashMap <String, String> MyHashMap; 
 	
 	private transient String password;
 
@@ -48,5 +53,6 @@ public class User implements Serializable {
 		final User deserialized = (User) ois.readObject();
 		assertEquals("Noel", deserialized.getUsername());
 		assertNull(deserialized.getPassword());
+		ois.close();
 	}
 }

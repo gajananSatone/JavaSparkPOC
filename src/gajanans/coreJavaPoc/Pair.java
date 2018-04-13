@@ -11,6 +11,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class Pair implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private final int number;
 	private final String name;
 
@@ -54,6 +58,7 @@ public class Pair implements Serializable {
 		assertEquals("Writing a string", string);
 		assertEquals(42, pair.getNumber());
 		assertEquals("Forty two", pair.getName());
+		ois.close();
 	}
 
 

@@ -1,15 +1,13 @@
 package gajanans.coreJavaPoc;
 
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
-
 public class DataStructure {
 
 	public static void main(String[] args) {
-		LinkedHashMap<String, String> myMap = new LinkedHashMap<String, String>();
-		Hashtable<String, String> ht = new Hashtable<>();
+//		LinkedHashMap<String, String> myMap = new LinkedHashMap<String, String>();
+//		Hashtable<String, String> ht = new Hashtable<>();
 		
 		Integer myIntValue = 111123;
+		@SuppressWarnings("unused")
 		Long myLongValue  = 23L;
 		Double myDoubleValue = 23.45;
 		Float myFloatVAlue = (float) 23.45;

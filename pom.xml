@@ -3,7 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>JavaSparkPOC</groupId>
 	<artifactId>JavaSparkPOC</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<name>JavaSparkPOC</name>
+	<packaging>jar</packaging>
+	<version>1.0</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -24,7 +26,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			<scope>test</scope>
+		<!--	<scope>test</scope> -->
 		</dependency>
 
 		<dependency>
@@ -32,6 +34,26 @@
 			<artifactId>akka-actor_2.10</artifactId>
 			<version>2.2.3</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>2.9.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.11.6</version>
+		</dependency>
+
 
 	</dependencies>
 
